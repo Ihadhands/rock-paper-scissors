@@ -1,42 +1,39 @@
 
 const choices = ['rock', 'paper', 'scissors'];
 
-
-
-
-
-
-function playRound(playerSelection, computerSelection) {
-    
-    function computerPlay() {
+function computerPlay() {
     const selection = choices[Math.floor(Math.random()* choices.length)];
+    console.log(selection);
     return selection;
 }
-    function user() {
-    const userInput = prompt('Choose Rock, Paper, Scissors?');
-    return userInput;
-}
-    console.log(computerPlay);
-    console.log(user);
-    const computerSelection = computerPlay();
-    console.log(computerSelection);
-    const playerSelection = user();
-    console.log(playerSelection);
-    
-    /*if ('rock' < 'paper') {
-            return alert('Paper beats Rock, you lose');
-        } else if ('paper' < 'scissors') {
-            return alert('Scissors beats paper, you lose');
-        } else if ('scissors' < 'rock') {
-            return alert('Rock beats Scissors, you lose');
-        } else if ('rock' === 'rock' || 'paper' === 'paper' || 'scissors' === 'scissors') {
-            return alert('It\'s a tie, try again');
-        } else {
-            return 'You win!'
-        } 
-    
-} */
 
-console.log(playRound(playerSelection, computerSelection));
+
+function user() {
+    const userInput = prompt('Choose Rock, Paper or Scissors');
+    console.log(userInput);
+    return userInput.toLowerCase();
+        
+}
+
+const playerChoice = user();
+const computerChoice = computerPlay();
+
+function playRound(playerSelection, computerSelection) {
+
+    if ((playerSelection === 'rock') && (computerSelection === 'paper')) {
+        return 'Paper beats rock, you lose';
+    } else if ((playerSelection === 'paper') && (computerSelection === 'scissors')) {
+        return 'scissors beats paper, you lose';
+    } else if ((playerSelection === 'scissors')&& (computerSelection === 'rock')) {
+        return 'rock beats scissors, you lose';
+    } else if (playerSelection === computerSelection) {
+        return 'it\'s a tie'
+    } else {
+        return 'You Win!';
+    }
+} 
+    
+ console.log(playRound(playerChoice, computerChoice))
+
 
 
