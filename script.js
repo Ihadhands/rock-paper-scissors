@@ -1,21 +1,29 @@
 
 const choices = ['rock', 'paper', 'scissors'];
 
-function computerPlay() {
+
+
+
+
+
+function playRound(playerSelection, computerSelection) {
+    
+    function computerPlay() {
     const selection = choices[Math.floor(Math.random()* choices.length)];
     return selection;
 }
-
-function user() {
+    function user() {
     const userInput = prompt('Choose Rock, Paper, Scissors?');
     return userInput;
 }
-
-const computerSelection = computerPlay();
-const playerSelection = user();
-
-function playRound(playerSelection, computerSelection) {
-        if ('rock' < 'paper') {
+    console.log(computerPlay);
+    console.log(user);
+    const computerSelection = computerPlay();
+    console.log(computerSelection);
+    const playerSelection = user();
+    console.log(playerSelection);
+    
+    /*if ('rock' < 'paper') {
             return alert('Paper beats Rock, you lose');
         } else if ('paper' < 'scissors') {
             return alert('Scissors beats paper, you lose');
@@ -25,8 +33,9 @@ function playRound(playerSelection, computerSelection) {
             return alert('It\'s a tie, try again');
         } else {
             return 'You win!'
-        }
-}
+        } 
+    
+} */
 
 console.log(playRound(playerSelection, computerSelection));
 
