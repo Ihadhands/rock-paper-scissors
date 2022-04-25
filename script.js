@@ -32,8 +32,32 @@ function playRound(playerSelection, computerSelection) {
         return 'You Win!';
     }
 } 
-    
  console.log(playRound(playerChoice, computerChoice))
+
+let playerScore = 0;
+let computerScore = 0;
+
+function game(playerScore, computerScore) {
+
+    for (let i = 0; i < 5; i++) {
+      playRound(playerChoice, computerChoice);
+      if ((playerChoice === true) && (computerChoice === true)) {
+            return null;
+      } else if (computerChoice === true) {
+          return computerScore++;
+      } else {
+          return playerScore++;
+      }
+    } 
+    
+    if (computerScore > playerScore) {
+        return `Computer wins ${computerScore}`;
+    } else {
+        return `You win ${playerScore}`;
+    }
+
+}
+console.log(game);
 
 
 
