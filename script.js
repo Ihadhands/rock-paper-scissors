@@ -73,7 +73,7 @@ function game () {
         alert('I don\'t know how to break this to you, but its a tie');
     }
 
-    console.log(`${playerScore} ${computerScore}`);
+    console.log(`Player : ${playerScore} Computer: ${computerScore}`);
 }
 
 game();
