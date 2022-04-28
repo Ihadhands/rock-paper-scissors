@@ -9,10 +9,17 @@ function computerPlay() {
 
 
 function user() {
-    const userInput = prompt('Choose Rock, Paper or Scissors');
-    console.log(userInput);
-    return userInput.toLowerCase();   
+    let userInput = prompt('Choose Rock, Paper or Scissors');
+    let player = userInput.toLowerCase();
+    while ((player !== 'rock') && (player !== 'paper') && (player !== 'scissors')) {
+        alert('Incorrect input please try again');
+        userInput = prompt('Choose Rock, Paper or Scissors');
+        player = userInput.toLowerCase();
+    }
+    console.log(player);
+    return player.toLowerCase();
 }
+
 
 
 
