@@ -20,7 +20,10 @@ function computerPlay() {
     return player.toLowerCase();
 }*/
 
-
+const btn = document.querySelector('#btn')
+btn.addEventListener('click', () => {
+    console.log(btn);
+});
 
 
 function playRound(playerSelection, computerSelection) {
