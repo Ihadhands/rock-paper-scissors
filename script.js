@@ -8,7 +8,7 @@ function computerPlay() {
 }
 
 
-function user() {
+/*function user() {
     let userInput = prompt('Choose Rock, Paper or Scissors');
     let player = userInput.toLowerCase();
     while ((player !== 'rock') && (player !== 'paper') && (player !== 'scissors')) {
@@ -18,7 +18,7 @@ function user() {
     }
     console.log(player);
     return player.toLowerCase();
-}
+}*/
 
 
 
@@ -60,7 +60,7 @@ function playRound(playerSelection, computerSelection) {
 let playerScore = 0;
 let computerScore = 0;
 
-function game () {
+/*function game () {
     
     
     let roundCounter = 0;
@@ -83,6 +83,6 @@ function game () {
     console.log(`Player : ${playerScore} Computer: ${computerScore}`);
 }
 
-game();
+game();*/
 
 
