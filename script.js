@@ -26,29 +26,30 @@ for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', playRound);
 }
 
-
-
+const outcome = document.querySelector('.outcome');
+let computerScore = 0;
+let playerScore = 0;
 
 function playRound() {
     
     let playerSelection = this.id
     console.log(playerSelection);
     let computerSelection = computerPlay();
-    let outcome = '';
+    
 
         if ((playerSelection === 'rock') && (computerSelection === 'paper') || (playerSelection === 'paper') && (computerSelection === 'scissors')
             || (playerSelection === 'scissors')&& (computerSelection === 'rock') ) {
-            alert(`${computerSelection} beats ${playerSelection}, you lose`);
+            outcome.textContent = `${computerSelection} beats ${playerSelection}, you lose`;
             computerScore++;
-            return outcome = `Paper beats rock, you lose player`;
+            
         } else if ((playerSelection === 'rock') && (computerSelection === 'scissors') || (playerSelection === 'scissors') && (computerSelection === 'paper')
             || (playerSelection === 'paper') && (computerSelection === 'rock') ) {
-            alert(`${playerSelection} beats ${computerSelection}, You win`);
+            outcome.textContent = `${playerSelection} beats ${computerSelection}, You win`;
             playerScore++;
-            return outcome = `rock beats scissors, you win player`;
+            ;
         } else {
-            alert('its a tie')
-            return outcome = `It's a tie, player:`;
+            
+            outcome.textContent = `It's a tie, player:`;
         }
     
     
@@ -56,8 +57,7 @@ function playRound() {
 
 
 
-let playerScore = 0;
-let computerScore = 0;
+
 
 
 /*function game () {
