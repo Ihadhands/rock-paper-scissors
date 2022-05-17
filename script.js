@@ -28,37 +28,22 @@ function computerPlay() {
 
 
 
-
 function playRound() {
     
-    let playerSelection = this;
+    let playerSelection = this.value;
     let computerSelection = computerPlay();
     let outcome = '';
 
-        if ((playerSelection === 'rock') && (computerSelection === 'paper')) {
-            alert('Paper beats rock, you lose');
+        if ((playerSelection === 'rock') && (computerSelection === 'paper') || (playerSelection === 'paper') && (computerSelection === 'scissors')
+            || (playerSelection === 'scissors')&& (computerSelection === 'rock') ) {
+            alert(`${computerSelection} beats ${playerSelection}, you lose`);
             computerScore++;
             return outcome = `Paper beats rock, you lose player`;
-        } else if ((playerSelection === 'paper') && (computerSelection === 'scissors')) {
-            alert('scissors beats paper, you lose');
-            computerScore++;
-            return outcome = `scissors beats paper, you lose player`;
-        } else if ((playerSelection === 'scissors')&& (computerSelection === 'rock')) {
-            alert('rock beats scissors, you lose');
-            computerScore++;
-            return outcome = `rock beats scissors, you lose player`;
-        } else if ((playerSelection === 'rock') && (computerSelection === 'scissors')) {
-            alert('rock beats scissors, you win');
+        } else if ((playerSelection === 'rock') && (computerSelection === 'scissors') || (playerSelection === 'scissors') && (computerSelection === 'paper')
+            || (playerSelection === 'paper') && (computerSelection === 'rock') ) {
+            alert(`${playerSelection} beats ${computerSelection}, You win`);
             playerScore++;
             return outcome = `rock beats scissors, you win player`;
-        } else if ((playerSelection === 'scissors') && (computerSelection === 'paper')) {
-            alert('scissors beats paper, you win');
-            playerScore++;
-            return outcome = `scissors beats paper, you win player`
-        } else if ((playerSelection === 'paper') && (computerSelection === 'rock')) {
-            alert('paper beats rock, you win');
-            playerScore++;
-            return outcome = `paper beats rock, you win player:`
         } else {
             alert('its a tie')
             return outcome = `It's a tie, player:`;
