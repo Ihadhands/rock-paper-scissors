@@ -21,16 +21,18 @@ function computerPlay() {
 }*/
 
 
-
-
-
+const buttons = document.getElementsByClassName('btn');
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', playRound);
+}
 
 
 
 
 function playRound() {
     
-    let playerSelection = this.value;
+    let playerSelection = this.id
+    console.log(playerSelection);
     let computerSelection = computerPlay();
     let outcome = '';
 
