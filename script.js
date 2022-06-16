@@ -48,12 +48,11 @@ function game() {
     
     if (playerScore === 5) {
         outcome.textContent = 'Congratulations you win';
+        reset();
     } else if (computerScore === 5) {
         outcome.textContent = 'You lose, better luck next time';
-    } else if ((playerScore > 5 && computerScore <= 5) || (playerScore <= 5 && computerScore > 5)) {
         reset();
     }
-   
 
     
 } 
